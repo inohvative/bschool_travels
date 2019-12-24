@@ -1,0 +1,64 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Energy level #<%= @energy_level.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/energy_levels" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link energy_level start -->
+      <div class="col">
+        <a href="/energy_levels/<%= @energy_level.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit energy level
+        </a>
+      </div>
+      <!-- Edit link energy_level end -->
+
+      <!-- Delete link energy_level start -->
+      <div class="col">
+        <a href="/delete_energy_level/<%= @energy_level.id %>" class="btn btn-block btn-outline-secondary">
+          Delete energy level
+        </a>
+      </div>
+      <!-- Delete link energy_level end -->
+    </div>
+
+    <dl>
+      <dt>
+        Party level
+      </dt>
+      <!-- Display party_level start -->
+      <dd>
+        <%= @energy_level.party_level %>
+      </dd>
+      <!-- Display party_level end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@energy_level.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@energy_level.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->

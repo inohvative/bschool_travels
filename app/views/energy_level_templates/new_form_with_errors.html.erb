@@ -1,0 +1,44 @@
+<!-- Validation failure messages -->
+<% if @energy_level.present? %>
+  <% if @energy_level.errors.any? %>
+    <% @energy_level.errors.full_messages.each do |message| %>
+      <div class="alert alert-danger">
+        <%= message %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h1>
+  Add a new energy level
+</h1>
+
+
+<hr>
+
+<!-- Form energy_level start -->
+<form action="/create_energy_level" method="post">
+<!-- Form energy_level end -->
+
+  <!-- Label and input for party_level start -->
+  <div class="form-group">
+    <label for="party_level">
+      Party level
+    </label>
+
+    <!-- Input for party_level start -->
+    <input type="text" id="party_level" name="party_level" class="form-control" value="<%= @energy_level.party_level %>">
+    <!-- Input for party_level end -->
+  </div>
+  <!-- Label and input for party_level end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create energy level
+  </button>
+</form>
+
+<hr>
+
+<a href="/energy_levels">
+  Go back
+</a>

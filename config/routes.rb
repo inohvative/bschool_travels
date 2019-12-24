@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Energy level resource:
+
+  # CREATE
+  get("/energy_levels/new", { :controller => "energy_levels", :action => "new_form" })
+  post("/create_energy_level", { :controller => "energy_levels", :action => "create_row" })
+
+  # READ
+  get("/energy_levels", { :controller => "energy_levels", :action => "index" })
+  get("/energy_levels/:id_to_display", { :controller => "energy_levels", :action => "show" })
+
+  # UPDATE
+  get("/energy_levels/:prefill_with_id/edit", { :controller => "energy_levels", :action => "edit_form" })
+  post("/update_energy_level/:id_to_modify", { :controller => "energy_levels", :action => "update_row" })
+
+  # DELETE
+  get("/delete_energy_level/:id_to_remove", { :controller => "energy_levels", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Age group resource:
 
   # CREATE
