@@ -13,17 +13,21 @@
 
       <!-- Edit link travel_persona start -->
       <div class="col">
-        <a href="/travel_personas/<%= @travel_persona.id %>/edit" class="btn btn-block btn-outline-secondary">
-          Edit travel persona
-        </a>
+        <% if current_user == @travel_persona.user %>
+          <a href="/travel_personas/<%= @travel_persona.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
+            Edit travel_persona
+          </a>
+        <% end %>
       </div>
       <!-- Edit link travel_persona end -->
 
       <!-- Delete link travel_persona start -->
       <div class="col">
-        <a href="/delete_travel_persona/<%= @travel_persona.id %>" class="btn btn-block btn-outline-secondary">
-          Delete travel persona
-        </a>
+        <% if current_user == @travel_persona.user %>
+          <a href="/delete_travel_persona/<%= @travel_persona.id %>" class="btn btn-block btn-sm btn-outline-secondary">
+            Delete travel_persona
+          </a>
+        <% end %>
       </div>
       <!-- Delete link travel_persona end -->
     </div>

@@ -17,9 +17,11 @@
         <!-- Show link end -->
 
         <!-- Delete link start -->
-        <a href="/delete_travel_persona_from_party_level/<%= travel_persona.id %>">
-          Delete
-        </a>
+        <%if current_user == travel_persona.user %>
+          <a href="/delete_travel_persona_from_energy_level/<%= travel_persona.id %>">
+            Delete
+          </a>
+        <% end %>
         <!-- Delete link end -->
 
       </li>
