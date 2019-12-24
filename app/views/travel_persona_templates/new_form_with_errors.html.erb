@@ -39,7 +39,7 @@
     </label>
 
     <!-- Input for party_level_id start -->
-    <input type="text" id="party_level_id" name="party_level_id" class="form-control" value="<%= @travel_persona.party_level_id %>">
+    <%= select_tag(:party_level_id, options_from_collection_for_select(EnergyLevel.all, :id, :party_level, @travel_persona.party_level_id), :class => "form-control") %>
     <!-- Input for party_level_id end -->
   </div>
   <!-- Label and input for party_level_id end -->
