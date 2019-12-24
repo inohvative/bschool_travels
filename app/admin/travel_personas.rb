@@ -1,4 +1,6 @@
 ActiveAdmin.register TravelPersona do
+
+ permit_params :user_id, :party_level_id, :age_cohort_id, :activities_id, :city_id
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
