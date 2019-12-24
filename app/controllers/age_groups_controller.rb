@@ -1,6 +1,7 @@
 class AgeGroupsController < ApplicationController
   def index
-    @age_groups = AgeGroup.page(params[:page]).per(10)
+    @q = AgeGroup.ransack(params[:q])
+    @age_groups = @q.result(:distinct => true).includes(:travel_preferences).page(params[:page]).per(10)
 
     render("age_group_templates/index.html.erb")
   end
