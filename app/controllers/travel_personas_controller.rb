@@ -116,7 +116,7 @@ class TravelPersonasController < ApplicationController
   def update_row
     @travel_persona = TravelPersona.find(params.fetch("id_to_modify"))
 
-    @travel_persona.user_id = params.fetch("user_id")
+    
     @travel_persona.party_level_id = params.fetch("party_level_id")
     @travel_persona.age_cohort_id = params.fetch("age_cohort_id")
     @travel_persona.activities_id = params.fetch("activities_id")
