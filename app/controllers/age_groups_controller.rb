@@ -1,6 +1,6 @@
 class AgeGroupsController < ApplicationController
   def index
-    @age_groups = AgeGroup.all
+    @age_groups = AgeGroup.page(params[:page]).per(10)
 
     render("age_group_templates/index.html.erb")
   end

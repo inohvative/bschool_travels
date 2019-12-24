@@ -10,7 +10,7 @@ class TravelPersonasController < ApplicationController
   end
 
   def index
-    @travel_personas = TravelPersona.all
+    @travel_personas = TravelPersona.page(params[:page]).per(10)
 
     render("travel_persona_templates/index.html.erb")
   end

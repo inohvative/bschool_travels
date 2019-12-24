@@ -1,6 +1,6 @@
 class EnergyLevelsController < ApplicationController
   def index
-    @energy_levels = EnergyLevel.all
+    @energy_levels = EnergyLevel.page(params[:page]).per(10)
 
     render("energy_level_templates/index.html.erb")
   end
