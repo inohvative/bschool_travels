@@ -10,17 +10,13 @@
   </div>
 </div>
 
-<!-- Ransack Code start -->
 <div class="row">
   <div class="col-md-12 mb-3">
     <%= render partial: "travel_persona_templates/travel_personas_search_form" %>
   </div>
 </div>
-<!-- Ransack Code end -->
 
-<!-- Location Map Code start -->
 
-<!-- Location Map Code end -->
 
 <hr>
 
@@ -66,13 +62,10 @@
 
       <% @travel_personas.each do |travel_persona| %>
       <tr>
-        <!-- Display travel_persona.id start -->
         <td>
           <%= travel_persona.id %>
         </td>
-        <!-- Display travel_persona.id end -->
 
-        <!-- Display travel_persona.user_id start -->
         <td>
           <% if travel_persona.user.present? %>
             <a href="/users/<%= travel_persona.user.id %>">
@@ -80,9 +73,7 @@
             </a>
           <% end %>
         </td>
-        <!-- Display travel_persona.user_id end -->
 
-        <!-- Display travel_persona.party_level_id start -->
         <td>
           <% if travel_persona.party_level.present? %>
             <a href="/energy_levels/<%= travel_persona.party_level.id %>">
@@ -90,9 +81,7 @@
             </a>
           <% end %>
         </td>
-        <!-- Display travel_persona.party_level_id end -->
 
-        <!-- Display travel_persona.age_cohort_id start -->
         <td>
           <% if travel_persona.age_cohort.present? %>
             <a href="/age_groups/<%= travel_persona.age_cohort.id %>">
@@ -100,9 +89,7 @@
             </a>
           <% end %>
         </td>
-        <!-- Display travel_persona.age_cohort_id end -->
 
-        <!-- Display travel_persona.activities_id start -->
         <td>
           <% if travel_persona.activities.present? %>
             <a href="/activities/<%= travel_persona.activities.id %>">
@@ -110,9 +97,7 @@
             </a>
           <% end %>
         </td>
-        <!-- Display travel_persona.activities_id end -->
 
-        <!-- Display travel_persona.city_id start -->
         <td>
           <% if travel_persona.city.present? %>
             <a href="/cities/<%= travel_persona.city.id %>">
@@ -120,19 +105,14 @@
             </a>
           <% end %>
         </td>
-        <!-- Display travel_persona.city_id end -->
 
-        <!-- Display travel_persona.created_at start -->
         <td>
           <%= time_ago_in_words(travel_persona.created_at) %> ago
         </td>
-        <!-- Display travel_persona.created_at end -->
 
-        <!-- Display travel_persona.updated_at start -->
         <td>
           <%= time_ago_in_words(travel_persona.updated_at) %> ago
         </td>
-        <!-- Display travel_persona.updated_at end -->
 
         <td>
           <a href="/travel_personas/<%= travel_persona.id %>">

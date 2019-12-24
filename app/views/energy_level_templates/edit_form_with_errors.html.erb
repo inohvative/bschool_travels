@@ -1,4 +1,3 @@
-<!-- Validation failure messages -->
 <% if @energy_level.errors.any? %>
   <% @energy_level.errors.full_messages.each do |message| %>
     <div class="alert">
@@ -13,21 +12,15 @@
 
 <hr>
 
-<!-- Form energy_level start -->
 <form action="/update_energy_level/<%= @energy_level.id %>" method="post">
-<!-- Form energy_level end -->
 
-  <!-- Label and input for party_level start -->
   <div class="form-group">
     <label for="party_level">
       Party level
     </label>
 
-    <!-- Input for party_level start -->
     <input type="text" id="party_level" name="party_level" class="form-control" value="<%= @energy_level.party_level %>">
-    <!-- Input for party_level end -->
   </div>
-  <!-- Label and input for party_level end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Update energy level

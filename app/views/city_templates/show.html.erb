@@ -11,58 +11,46 @@
         </a>
       </div>
 
-      <!-- Edit link city start -->
       <div class="col">
         <a href="/cities/<%= @city.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit city
         </a>
       </div>
-      <!-- Edit link city end -->
 
-      <!-- Delete link city start -->
       <div class="col">
         <a href="/delete_city/<%= @city.id %>" class="btn btn-block btn-outline-secondary">
           Delete city
         </a>
       </div>
-      <!-- Delete link city end -->
     </div>
 
     <dl>
       <dt>
         City name
       </dt>
-      <!-- Display city_name start -->
       <dd>
         <%= @city.city_name %>
       </dd>
-      <!-- Display city_name end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@city.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@city.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <%= render partial: "city_templates/city_travel_preferences" %>
   </div>
 </div>
-<!-- Show Page Customization end -->

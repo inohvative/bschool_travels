@@ -11,7 +11,6 @@
         </a>
       </div>
 
-      <!-- Edit link travel_persona start -->
       <div class="col">
         <% if current_user == @travel_persona.user %>
           <a href="/travel_personas/<%= @travel_persona.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
@@ -19,9 +18,7 @@
           </a>
         <% end %>
       </div>
-      <!-- Edit link travel_persona end -->
 
-      <!-- Delete link travel_persona start -->
       <div class="col">
         <% if current_user == @travel_persona.user %>
           <a href="/delete_travel_persona/<%= @travel_persona.id %>" class="btn btn-block btn-sm btn-outline-secondary">
@@ -29,14 +26,12 @@
           </a>
         <% end %>
       </div>
-      <!-- Delete link travel_persona end -->
     </div>
 
     <dl>
       <dt>
         User
       </dt>
-      <!-- Display user_id start -->
       <dd>
         <% if @travel_persona.user.present? %>
           <a href="/users/<%= @travel_persona.user_id %>">
@@ -44,12 +39,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display user_id end -->
 
       <dt>
         Party level
       </dt>
-      <!-- Display party_level_id start -->
       <dd>
         <% if @travel_persona.party_level.present? %>
           <a href="/energy_levels/<%= @travel_persona.party_level_id %>">
@@ -57,12 +50,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display party_level_id end -->
 
       <dt>
         Age cohort
       </dt>
-      <!-- Display age_cohort_id start -->
       <dd>
         <% if @travel_persona.age_cohort.present? %>
           <a href="/age_groups/<%= @travel_persona.age_cohort_id %>">
@@ -70,12 +61,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display age_cohort_id end -->
 
       <dt>
         Activities
       </dt>
-      <!-- Display activities_id start -->
       <dd>
         <% if @travel_persona.activities.present? %>
           <a href="/activities/<%= @travel_persona.activities_id %>">
@@ -83,12 +72,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display activities_id end -->
 
       <dt>
         City
       </dt>
-      <!-- Display city_id start -->
       <dd>
         <% if @travel_persona.city.present? %>
           <a href="/cities/<%= @travel_persona.city_id %>">
@@ -96,28 +83,21 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display city_id end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@travel_persona.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@travel_persona.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->

@@ -1,53 +1,32 @@
-<!-- Form travel_persona start -->
 <form action="/create_travel_persona_from_age_group" method="post">
-<!-- Form travel_persona end -->
 
-  <!-- Label and input for user_id start -->
-  <!-- Input for "user_id" start -->
   <input type="hidden" name="user_id" value="<%= current_user.id %>">
-  <!-- Input for "user_id" end -->
-  <!-- Label and input for user_id end -->
 
-  <!-- Label and input for party_level_id start -->
   <div class="form-group">
     <label for="party_level_id">
       Party level
     </label>
 
-    <!-- Input for party_level_id start -->
     <%= select_tag(:party_level_id, options_from_collection_for_select(EnergyLevel.all, :id, :party_level, @travel_persona.party_level_id), :class => "form-control") %>
-    <!-- Input for party_level_id end -->
   </div>
-  <!-- Label and input for party_level_id end -->
 
-  <!-- Label and input for age_cohort_id start -->
-  <!-- Input for age_cohort_id start -->
   <input type="hidden" name="age_cohort_id" value="<%= @age_group.id %>">
-  <!-- Input for age_cohort_id end -->
 
-  <!-- Label and input for activities_id start -->
   <div class="form-group">
     <label for="activities_id">
       Activities
     </label>
 
-    <!-- Input for activities_id start -->
     <%= select_tag(:activities_id, options_from_collection_for_select(Activity.all, :id, :name, @travel_persona.activities_id), :class => "form-control") %>
-    <!-- Input for activities_id end -->
   </div>
-  <!-- Label and input for activities_id end -->
 
-  <!-- Label and input for city_id start -->
   <div class="form-group">
     <label for="city_id">
       City
     </label>
 
-    <!-- Input for city_id start -->
     <%= select_tag(:city_id, options_from_collection_for_select(City.all, :id, :city_name, @travel_persona.city_id), :class => "form-control") %>
-    <!-- Input for city_id end -->
   </div>
-  <!-- Label and input for city_id end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create travel persona

@@ -10,28 +10,22 @@
   <ul class="list-group list-group-flush">
     <% @age_group.travel_preferences.each do |travel_persona| %>
       <li class="list-group-item d-flex align-items-center justify-content-between">
-        <!-- Show link start -->
         <a href="/travel_personas/<%= travel_persona.id %>">
           <%= travel_persona.user_id %>
         </a>
-        <!-- Show link end -->
 
-        <!-- Delete link start -->
         <%if current_user == travel_persona.user %>
           <a href="/delete_travel_persona_from_age_group/<%= travel_persona.id %>">
             Delete
           </a>
         <% end %>
-        <!-- Delete link end -->
 
       </li>
     <% end %>
 
     <div class="card-footer">
       <div class="collapse" id="age_group_travel_preferences_new_form">
-        <!-- New associationcollection form start -->
         <%= render partial: "age_group_templates/age_group_travel_preferences_new_form" %>
-        <!-- New associationcollection form end -->
       </div>
     </div>
 
