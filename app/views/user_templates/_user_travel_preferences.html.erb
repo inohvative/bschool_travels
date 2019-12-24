@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card-header d-flex align-items-center justify-content-between">
+    Travel Preferences
+
+    <a data-toggle="collapse" href="#user_travel_preferences_new_form">
+      Add travel persona
+    </a>
+  </div>
+
+  <ul class="list-group list-group-flush">
+    <% @user.travel_preferences.each do |travel_persona| %>
+      <li class="list-group-item d-flex align-items-center justify-content-between">
+        <!-- Show link start -->
+        <a href="/travel_personas/<%= travel_persona.id %>">
+          <%= travel_persona.user_id %>
+        </a>
+        <!-- Show link end -->
+
+      </li>
+    <% end %>
+
+  </ul>
+</div>

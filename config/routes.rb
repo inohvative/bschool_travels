@@ -18,6 +18,11 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_travel_persona/:id_to_remove", { :controller => "travel_personas", :action => "destroy_row" })
+  get("/delete_travel_persona_from_party_level/:id_to_remove", { :controller => "travel_personas", :action => "destroy_row_from_party_level" })
+  get("/delete_travel_persona_from_age_cohort/:id_to_remove", { :controller => "travel_personas", :action => "destroy_row_from_age_cohort" })
+  get("/delete_travel_persona_from_city/:id_to_remove", { :controller => "travel_personas", :action => "destroy_row_from_city" })
+  get("/delete_travel_persona_from_user/:id_to_remove", { :controller => "travel_personas", :action => "destroy_row_from_user" })
+  get("/delete_travel_persona_from_activities/:id_to_remove", { :controller => "travel_personas", :action => "destroy_row_from_activities" })
 
   #------------------------------
 

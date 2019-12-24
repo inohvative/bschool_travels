@@ -59,6 +59,46 @@ class TravelPersonasController < ApplicationController
     end
   end
 
+  def destroy_row_from_activities
+    @travel_persona = TravelPersona.find(params.fetch("id_to_remove"))
+
+    @travel_persona.destroy
+
+    redirect_to("/activities/#{@travel_persona.activities_id}", notice: "TravelPersona deleted successfully.")
+  end
+
+  def destroy_row_from_user
+    @travel_persona = TravelPersona.find(params.fetch("id_to_remove"))
+
+    @travel_persona.destroy
+
+    redirect_to("/users/#{@travel_persona.user_id}", notice: "TravelPersona deleted successfully.")
+  end
+
+  def destroy_row_from_city
+    @travel_persona = TravelPersona.find(params.fetch("id_to_remove"))
+
+    @travel_persona.destroy
+
+    redirect_to("/cities/#{@travel_persona.city_id}", notice: "TravelPersona deleted successfully.")
+  end
+
+  def destroy_row_from_age_cohort
+    @travel_persona = TravelPersona.find(params.fetch("id_to_remove"))
+
+    @travel_persona.destroy
+
+    redirect_to("/age_groups/#{@travel_persona.age_cohort_id}", notice: "TravelPersona deleted successfully.")
+  end
+
+  def destroy_row_from_party_level
+    @travel_persona = TravelPersona.find(params.fetch("id_to_remove"))
+
+    @travel_persona.destroy
+
+    redirect_to("/energy_levels/#{@travel_persona.party_level_id}", notice: "TravelPersona deleted successfully.")
+  end
+
   def destroy_row
     @travel_persona = TravelPersona.find(params.fetch("id_to_remove"))
 
