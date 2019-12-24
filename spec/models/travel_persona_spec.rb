@@ -4,6 +4,8 @@ RSpec.describe TravelPersona, type: :model do
   
     describe "Direct Associations" do
 
+    it { should belong_to(:party_level) }
+
     it { should belong_to(:age_cohort) }
 
     it { should belong_to(:city) }

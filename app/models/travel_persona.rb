@@ -1,6 +1,9 @@
 class TravelPersona < ApplicationRecord
   # Direct associations
 
+  belongs_to :party_level,
+             :class_name => "EnergyLevel"
+
   belongs_to :age_cohort,
              :class_name => "AgeGroup"
 
