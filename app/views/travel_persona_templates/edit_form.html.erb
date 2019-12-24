@@ -63,7 +63,7 @@
     </label>
 
     <!-- Input for city_id start -->
-    <input type="text" id="city_id" name="city_id" class="form-control" value="<%= @travel_persona.city_id %>">
+    <%= select_tag(:city_id, options_from_collection_for_select(City.all, :id, :city_name, @travel_persona.city_id), :class => "form-control") %>
     <!-- Input for city_id end -->
   </div>
   <!-- Label and input for city_id end -->
