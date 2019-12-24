@@ -6,6 +6,7 @@ class ActivitiesController < ApplicationController
   end
 
   def show
+    @travel_persona = TravelPersona.new
     @activity = Activity.find(params.fetch("id_to_display"))
 
     render("activity_templates/show.html.erb")

@@ -6,6 +6,7 @@ class EnergyLevelsController < ApplicationController
   end
 
   def show
+    @travel_persona = TravelPersona.new
     @energy_level = EnergyLevel.find(params.fetch("id_to_display"))
 
     render("energy_level_templates/show.html.erb")

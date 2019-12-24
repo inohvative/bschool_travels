@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   # CREATE
   get("/travel_personas/new", { :controller => "travel_personas", :action => "new_form" })
   post("/create_travel_persona", { :controller => "travel_personas", :action => "create_row" })
+  post("/create_travel_persona_from_energy_level", { :controller => "travel_personas", :action => "create_row_from_energy_level" })
+  post("/create_travel_persona_from_age_group", { :controller => "travel_personas", :action => "create_row_from_age_group" })
+  post("/create_travel_persona_from_city", { :controller => "travel_personas", :action => "create_row_from_city" })
+  post("/create_travel_persona_from_activity", { :controller => "travel_personas", :action => "create_row_from_activity" })
 
   # READ
   get("/travel_personas", { :controller => "travel_personas", :action => "index" })

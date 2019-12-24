@@ -6,6 +6,7 @@ class AgeGroupsController < ApplicationController
   end
 
   def show
+    @travel_persona = TravelPersona.new
     @age_group = AgeGroup.find(params.fetch("id_to_display"))
 
     render("age_group_templates/show.html.erb")

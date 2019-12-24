@@ -35,6 +35,78 @@ class TravelPersonasController < ApplicationController
     end
   end
 
+  def create_row_from_activity
+    @travel_persona = TravelPersona.new
+
+    @travel_persona.user_id = params.fetch("user_id")
+    @travel_persona.party_level_id = params.fetch("party_level_id")
+    @travel_persona.age_cohort_id = params.fetch("age_cohort_id")
+    @travel_persona.activities_id = params.fetch("activities_id")
+    @travel_persona.city_id = params.fetch("city_id")
+
+    if @travel_persona.valid?
+      @travel_persona.save
+
+      redirect_to("/activities/#{@travel_persona.activities_id}", notice: "TravelPersona created successfully.")
+    else
+      render("travel_persona_templates/new_form_with_errors.html.erb")
+    end
+  end
+
+  def create_row_from_city
+    @travel_persona = TravelPersona.new
+
+    @travel_persona.user_id = params.fetch("user_id")
+    @travel_persona.party_level_id = params.fetch("party_level_id")
+    @travel_persona.age_cohort_id = params.fetch("age_cohort_id")
+    @travel_persona.activities_id = params.fetch("activities_id")
+    @travel_persona.city_id = params.fetch("city_id")
+
+    if @travel_persona.valid?
+      @travel_persona.save
+
+      redirect_to("/cities/#{@travel_persona.city_id}", notice: "TravelPersona created successfully.")
+    else
+      render("travel_persona_templates/new_form_with_errors.html.erb")
+    end
+  end
+
+  def create_row_from_age_group
+    @travel_persona = TravelPersona.new
+
+    @travel_persona.user_id = params.fetch("user_id")
+    @travel_persona.party_level_id = params.fetch("party_level_id")
+    @travel_persona.age_cohort_id = params.fetch("age_cohort_id")
+    @travel_persona.activities_id = params.fetch("activities_id")
+    @travel_persona.city_id = params.fetch("city_id")
+
+    if @travel_persona.valid?
+      @travel_persona.save
+
+      redirect_to("/age_groups/#{@travel_persona.age_cohort_id}", notice: "TravelPersona created successfully.")
+    else
+      render("travel_persona_templates/new_form_with_errors.html.erb")
+    end
+  end
+
+  def create_row_from_energy_level
+    @travel_persona = TravelPersona.new
+
+    @travel_persona.user_id = params.fetch("user_id")
+    @travel_persona.party_level_id = params.fetch("party_level_id")
+    @travel_persona.age_cohort_id = params.fetch("age_cohort_id")
+    @travel_persona.activities_id = params.fetch("activities_id")
+    @travel_persona.city_id = params.fetch("city_id")
+
+    if @travel_persona.valid?
+      @travel_persona.save
+
+      redirect_to("/energy_levels/#{@travel_persona.party_level_id}", notice: "TravelPersona created successfully.")
+    else
+      render("travel_persona_templates/new_form_with_errors.html.erb")
+    end
+  end
+
   def edit_form
     @travel_persona = TravelPersona.find(params.fetch("prefill_with_id"))
 
