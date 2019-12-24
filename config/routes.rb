@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "activities#index"
   # Routes for the Travel persona resource:
 
   # CREATE
