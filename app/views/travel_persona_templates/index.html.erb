@@ -70,31 +70,51 @@
 
         <!-- Display travel_persona.user_id start -->
         <td>
-          <%= travel_persona.user.email %>
+          <% if travel_persona.user.present? %>
+            <a href="/users/<%= travel_persona.user.id %>">
+              <%= travel_persona.user.email %>
+            </a>
+          <% end %>
         </td>
         <!-- Display travel_persona.user_id end -->
 
         <!-- Display travel_persona.party_level_id start -->
         <td>
-          <%= travel_persona.party_level.party_level %>
+          <% if travel_persona.party_level.present? %>
+            <a href="/energy_levels/<%= travel_persona.party_level.id %>">
+              <%= travel_persona.party_level.party_level %>
+            </a>
+          <% end %>
         </td>
         <!-- Display travel_persona.party_level_id end -->
 
         <!-- Display travel_persona.age_cohort_id start -->
         <td>
-          <%= travel_persona.age_cohort.age_cohort %>
+          <% if travel_persona.age_cohort.present? %>
+            <a href="/age_groups/<%= travel_persona.age_cohort.id %>">
+              <%= travel_persona.age_cohort.age_cohort %>
+            </a>
+          <% end %>
         </td>
         <!-- Display travel_persona.age_cohort_id end -->
 
         <!-- Display travel_persona.activities_id start -->
         <td>
-          <%= travel_persona.activities.name %>
+          <% if travel_persona.activities.present? %>
+            <a href="/activities/<%= travel_persona.activities.id %>">
+              <%= travel_persona.activities.name %>
+            </a>
+          <% end %>
         </td>
         <!-- Display travel_persona.activities_id end -->
 
         <!-- Display travel_persona.city_id start -->
         <td>
-          <%= travel_persona.city.city_name %>
+          <% if travel_persona.city.present? %>
+            <a href="/cities/<%= travel_persona.city.id %>">
+              <%= travel_persona.city.city_name %>
+            </a>
+          <% end %>
         </td>
         <!-- Display travel_persona.city_id end -->
 
