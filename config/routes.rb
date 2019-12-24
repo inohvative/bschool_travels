@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the City resource:
+
+  # CREATE
+  get("/cities/new", { :controller => "cities", :action => "new_form" })
+  post("/create_city", { :controller => "cities", :action => "create_row" })
+
+  # READ
+  get("/cities", { :controller => "cities", :action => "index" })
+  get("/cities/:id_to_display", { :controller => "cities", :action => "show" })
+
+  # UPDATE
+  get("/cities/:prefill_with_id/edit", { :controller => "cities", :action => "edit_form" })
+  post("/update_city/:id_to_modify", { :controller => "cities", :action => "update_row" })
+
+  # DELETE
+  get("/delete_city/:id_to_remove", { :controller => "cities", :action => "destroy_row" })
+
+  #------------------------------
+
   devise_for :users
   # Routes for the User resource:
 
