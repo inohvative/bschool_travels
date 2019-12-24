@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Age group resource:
+
+  # CREATE
+  get("/age_groups/new", { :controller => "age_groups", :action => "new_form" })
+  post("/create_age_group", { :controller => "age_groups", :action => "create_row" })
+
+  # READ
+  get("/age_groups", { :controller => "age_groups", :action => "index" })
+  get("/age_groups/:id_to_display", { :controller => "age_groups", :action => "show" })
+
+  # UPDATE
+  get("/age_groups/:prefill_with_id/edit", { :controller => "age_groups", :action => "edit_form" })
+  post("/update_age_group/:id_to_modify", { :controller => "age_groups", :action => "update_row" })
+
+  # DELETE
+  get("/delete_age_group/:id_to_remove", { :controller => "age_groups", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the City resource:
 
   # CREATE

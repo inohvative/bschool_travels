@@ -1,0 +1,64 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Age group #<%= @age_group.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/age_groups" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link age_group start -->
+      <div class="col">
+        <a href="/age_groups/<%= @age_group.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit age group
+        </a>
+      </div>
+      <!-- Edit link age_group end -->
+
+      <!-- Delete link age_group start -->
+      <div class="col">
+        <a href="/delete_age_group/<%= @age_group.id %>" class="btn btn-block btn-outline-secondary">
+          Delete age group
+        </a>
+      </div>
+      <!-- Delete link age_group end -->
+    </div>
+
+    <dl>
+      <dt>
+        Age cohort
+      </dt>
+      <!-- Display age_cohort start -->
+      <dd>
+        <%= @age_group.age_cohort %>
+      </dd>
+      <!-- Display age_cohort end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@age_group.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@age_group.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->

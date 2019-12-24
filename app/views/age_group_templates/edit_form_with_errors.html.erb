@@ -1,0 +1,41 @@
+<!-- Validation failure messages -->
+<% if @age_group.errors.any? %>
+  <% @age_group.errors.full_messages.each do |message| %>
+    <div class="alert">
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<h1>
+  Edit age group #<%= @age_group.id %>
+</h1>
+
+<hr>
+
+<!-- Form age_group start -->
+<form action="/update_age_group/<%= @age_group.id %>" method="post">
+<!-- Form age_group end -->
+
+  <!-- Label and input for age_cohort start -->
+  <div class="form-group">
+    <label for="age_cohort">
+      Age cohort
+    </label>
+
+    <!-- Input for age_cohort start -->
+    <input type="text" id="age_cohort" name="age_cohort" class="form-control" value="<%= @age_group.age_cohort %>">
+    <!-- Input for age_cohort end -->
+  </div>
+  <!-- Label and input for age_cohort end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update age group
+  </button>
+</form>
+
+<hr>
+
+<a href="/age_groups">
+  Go back
+</a>
