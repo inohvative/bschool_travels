@@ -4,6 +4,8 @@ RSpec.describe TravelPersona, type: :model do
   
     describe "Direct Associations" do
 
+    it { should belong_to(:activities) }
+
     end
 
     describe "InDirect Associations" do
