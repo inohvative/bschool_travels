@@ -1,0 +1,100 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Travel persona #<%= @travel_persona.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/travel_personas" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link travel_persona start -->
+      <div class="col">
+        <a href="/travel_personas/<%= @travel_persona.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit travel persona
+        </a>
+      </div>
+      <!-- Edit link travel_persona end -->
+
+      <!-- Delete link travel_persona start -->
+      <div class="col">
+        <a href="/delete_travel_persona/<%= @travel_persona.id %>" class="btn btn-block btn-outline-secondary">
+          Delete travel persona
+        </a>
+      </div>
+      <!-- Delete link travel_persona end -->
+    </div>
+
+    <dl>
+      <dt>
+        User
+      </dt>
+      <!-- Display user_id start -->
+      <dd>
+        <%= @travel_persona.user_id %>
+      </dd>
+      <!-- Display user_id end -->
+
+      <dt>
+        Party level
+      </dt>
+      <!-- Display party_level_id start -->
+      <dd>
+        <%= @travel_persona.party_level_id %>
+      </dd>
+      <!-- Display party_level_id end -->
+
+      <dt>
+        Age cohort
+      </dt>
+      <!-- Display age_cohort_id start -->
+      <dd>
+        <%= @travel_persona.age_cohort_id %>
+      </dd>
+      <!-- Display age_cohort_id end -->
+
+      <dt>
+        Activities
+      </dt>
+      <!-- Display activities_id start -->
+      <dd>
+        <%= @travel_persona.activities_id %>
+      </dd>
+      <!-- Display activities_id end -->
+
+      <dt>
+        City
+      </dt>
+      <!-- Display city_id start -->
+      <dd>
+        <%= @travel_persona.city_id %>
+      </dd>
+      <!-- Display city_id end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@travel_persona.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@travel_persona.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->

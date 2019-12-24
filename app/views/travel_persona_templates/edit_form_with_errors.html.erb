@@ -1,0 +1,89 @@
+<!-- Validation failure messages -->
+<% if @travel_persona.errors.any? %>
+  <% @travel_persona.errors.full_messages.each do |message| %>
+    <div class="alert">
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<h1>
+  Edit travel persona #<%= @travel_persona.id %>
+</h1>
+
+<hr>
+
+<!-- Form travel_persona start -->
+<form action="/update_travel_persona/<%= @travel_persona.id %>" method="post">
+<!-- Form travel_persona end -->
+
+  <!-- Label and input for user_id start -->
+  <div class="form-group">
+    <label for="user_id">
+      User
+    </label>
+
+    <!-- Input for user_id start -->
+    <input type="text" id="user_id" name="user_id" class="form-control" value="<%= @travel_persona.user_id %>">
+    <!-- Input for user_id end -->
+  </div>
+  <!-- Label and input for user_id end -->
+
+  <!-- Label and input for party_level_id start -->
+  <div class="form-group">
+    <label for="party_level_id">
+      Party level
+    </label>
+
+    <!-- Input for party_level_id start -->
+    <input type="text" id="party_level_id" name="party_level_id" class="form-control" value="<%= @travel_persona.party_level_id %>">
+    <!-- Input for party_level_id end -->
+  </div>
+  <!-- Label and input for party_level_id end -->
+
+  <!-- Label and input for age_cohort_id start -->
+  <div class="form-group">
+    <label for="age_cohort_id">
+      Age cohort
+    </label>
+
+    <!-- Input for age_cohort_id start -->
+    <input type="text" id="age_cohort_id" name="age_cohort_id" class="form-control" value="<%= @travel_persona.age_cohort_id %>">
+    <!-- Input for age_cohort_id end -->
+  </div>
+  <!-- Label and input for age_cohort_id end -->
+
+  <!-- Label and input for activities_id start -->
+  <div class="form-group">
+    <label for="activities_id">
+      Activities
+    </label>
+
+    <!-- Input for activities_id start -->
+    <input type="text" id="activities_id" name="activities_id" class="form-control" value="<%= @travel_persona.activities_id %>">
+    <!-- Input for activities_id end -->
+  </div>
+  <!-- Label and input for activities_id end -->
+
+  <!-- Label and input for city_id start -->
+  <div class="form-group">
+    <label for="city_id">
+      City
+    </label>
+
+    <!-- Input for city_id start -->
+    <input type="text" id="city_id" name="city_id" class="form-control" value="<%= @travel_persona.city_id %>">
+    <!-- Input for city_id end -->
+  </div>
+  <!-- Label and input for city_id end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update travel persona
+  </button>
+</form>
+
+<hr>
+
+<a href="/travel_personas">
+  Go back
+</a>

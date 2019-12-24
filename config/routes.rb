@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Travel persona resource:
+
+  # CREATE
+  get("/travel_personas/new", { :controller => "travel_personas", :action => "new_form" })
+  post("/create_travel_persona", { :controller => "travel_personas", :action => "create_row" })
+
+  # READ
+  get("/travel_personas", { :controller => "travel_personas", :action => "index" })
+  get("/travel_personas/:id_to_display", { :controller => "travel_personas", :action => "show" })
+
+  # UPDATE
+  get("/travel_personas/:prefill_with_id/edit", { :controller => "travel_personas", :action => "edit_form" })
+  post("/update_travel_persona/:id_to_modify", { :controller => "travel_personas", :action => "update_row" })
+
+  # DELETE
+  get("/delete_travel_persona/:id_to_remove", { :controller => "travel_personas", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Energy level resource:
 
   # CREATE
